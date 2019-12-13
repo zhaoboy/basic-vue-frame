@@ -1,7 +1,7 @@
 {
-  "name": "my-webpack4-vue2",
+  "name": "basic-vue-frame",
   "version": "1.0.0",
-  "description": "webpack4-vue2-multi-page",
+  "description": "基于webpack4搭建的Vue多页面应用",
   "main": "index.js",
   "scripts": {
     "dev": "cross-env BUILD_MODE=dev webpack-dev-server ",

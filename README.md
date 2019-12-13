@@ -1,4 +1,4 @@
-# 基于webpack4搭建vue2、vuex多页应用
+# 基于webpack4搭建的Vue多页面应用
 
 ## 背景
 
