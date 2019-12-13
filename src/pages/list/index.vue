@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header-nav></header-nav>
+    <header-nav :activeHeaderIndex='activeHeaderIndex'></header-nav>
     <p class="list">List Page</p>
     <div class="count">
       <span v-text='count'></span>
@@ -12,15 +12,20 @@
   </div>
 </template>
 <script>
-import headerNav from '../../components/headerNav.vue';
+import headerNav from '../../components/common/headerNav.vue';
 import { mapGetters, mapActions } from 'vuex';
 export default {
   name: 'index',
-  computed: {
-    ...mapGetters(['count'])
-  },
   components: {
     'header-nav': headerNav
+  },
+  data() {
+    return {
+      activeHeaderIndex: '2',
+    };
+  },
+  computed: {
+    ...mapGetters(['count'])
   },
   methods: {
     ...mapActions([

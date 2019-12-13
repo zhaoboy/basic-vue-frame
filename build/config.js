@@ -1,6 +1,10 @@
 module.exports = {
   HTMLDirs: [
     {
+      page: 'login',
+      title: '登录'
+    },
+    {
       page: 'index',
       title: '首页'
     },

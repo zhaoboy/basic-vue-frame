@@ -9,8 +9,8 @@ let HTMLPlugins = [];
 let Entries = {};
 
 config.HTMLDirs.forEach(item => {
-  let filename = `${item.page}.html`;
-  if (item.dir) filename = `${item.dir}/${item.page}.html`;
+  let filename = `${item.page}`;
+  if (item.dir) filename = `${item.dir}/${item.page}`;
   const htmlPlugin = new HTMLWebpackPlugin({
     title: item.title, // 生成的html页面的标题
     filename: filename, // 生成到dist目录下的html文件名称，支持多级目录（eg: `${item.page}/index.html`）

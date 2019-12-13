@@ -20,33 +20,32 @@ npm install
 ```
 npm run dev
 ```
-进入开发模式，自动打开浏览器并访问http://localhost:8080/index.html，并随时响应代码修改。
+进入开发模式，自动打开浏览器并访问[http://localhost:8999](http://localhost:8999)，并随时响应代码修改。
 
 ## 目录结构说明
 
 ```
 project
 │   README.md
-│   webpack.config.js // webpack配置基础文件
-│   .gitignore // 标注git提交需忽略的内容
-│   package.json  // 项目所需要的各种模块及项目的配置信息等重要信息
+│   webpack.config.js               // webpack配置基础文件
+│   .gitignore                      // 标注git提交需忽略的内容
+│   package.json                    // 项目所需要的各种模块及项目的配置信息等重要信息
 │
 └───build
-│   │   config.js //多文件及路径配置
-│   │   webpack.base.js //打包基础配置
-│   │   webpack.dev.js //开发打包配置
-│   │   webpack.prod.js //产品打包配置
-│   │
-│   └───subfolder1
-│       │   file111.txt
-│       │   file112.txt
-│       │   ...
+│   │   config.js                   // 多文件及路径配置
+│   │   webpack.base.js             // 打包基础配置
+│   │   webpack.dev.js              // 开发打包配置
+│   │   webpack.prod.js             // 产品打包配置
 │   
-└───src
-    │   assets //静态文件集合，如静态图片等
-    │   components // 模块和组件
-    │   pages // 项目模板文件，会根据需要持续扩充
-    │   store // vuex
-    │   styles // 存放样式
+└───src                            // 源码目录
+│   │   assets                      // 静态文件集合，如静态图片等
+│   │   components                  // 模块和组件
+│   │   └───common
+│           │   headerNav.vue       // 页面公共header
+│           │   sideBar.vue         // 页面公共sidebar
+│   │   pages                       // 项目模板文件，会根据需要持续扩充
+│   │   store                       // vuex
+│   │   styles                      // 存放样式
+│   │   template                    // 项目模板文件
 ```
 
