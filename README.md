@@ -12,14 +12,14 @@ webpack + vue + vuex + ElementUI + Sass + ES6
 ## 安装与运行
 
 本项目运行需要本机安装Node6.0以上版本。
-命令行到此目录下运行：
-···
+命令行到此目录下运行：  
+```
 npm install
-···
+``` 
 安装完成后，工程内会生成node_modules等相关依赖目录，继续运行：
-···
+```
 npm run dev
-···
+```
 进入开发模式，自动打开浏览器并访问http://localhost:8080/index.html，并随时响应代码修改。
 
 ## 目录结构说明
