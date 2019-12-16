@@ -22,6 +22,13 @@ npm run dev
 ```
 进入开发模式，自动打开浏览器并访问[http://localhost:8999](http://localhost:8999)，并随时响应代码修改。
 
+使用国内cnpm
+```
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+cnpm install
+cnpm run dev
+```
+
 ## 目录结构说明
 
 ```
