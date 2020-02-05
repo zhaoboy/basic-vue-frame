@@ -11,6 +11,7 @@
         <el-main>
           <button @click="showHeaderMethod()">Show</button>
           <button @click="hideHeaderMethod()">Hide</button>
+          <div id="echarts-demo" style="height: 200px;"></div>
         </el-main>
         <el-footer>Footer</el-footer>
       </el-container>
@@ -23,6 +24,7 @@ import sideBar from '@components/common/sideBar.vue';
 import Vue from 'vue';
 import Vuex from 'vuex';
 import { mapGetters, mapActions } from 'vuex';
+import echarts from 'echarts';
 Vue.use(Vuex);
 
 const state = { //要设置的全局访问的state对象
@@ -89,6 +91,42 @@ export default {
     add(){
       this.addCount({num: 10});
     }
+  },
+  mounted() {
+    let myChart = echarts.init(document.getElementById('echarts-demo'));
+    let option = {
+      color: ['#f44'],
+      tooltip : {
+        trigger: 'axis',
+        axisPointer : {
+          type : 'shadow'
+        }
+      },
+      xAxis : [
+        {
+          type : 'category',
+          data : ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月',],
+          axisTick: {
+            alignWithLabel: true
+          }
+        }
+      ],
+      yAxis : [
+        {
+          type : 'value'
+        }
+      ],
+      series : [
+        {
+          name:'每月花费',
+          type:'bar',
+          barWidth: '60%',
+          data:[995,666,444,858,654,236,645,546,846,225,547,356]
+        }
+      ]
+    };
+    myChart.setOption(option);
+
   }
 };
 </script>
